@@ -1,0 +1,14 @@
+#cloud-config
+package_update: true
+packages:
+  - docker.io
+  - linux-modules-extra-aws
+ssh_pwauth: false
+ssh_authorized_keys:
+  - REPLACE_WITH_YOUR_PUBLIC_SSH_KEY
+runcmd:
+  - systemctl enable --now docker
+  - modprobe binder_linux devices="binder,hwbinder,vndbinder" || true
+  - mkdir -p /dev/binderfs
+  - mount -t binder binder /dev/binderfs || true
+  - shutdown -h +2880

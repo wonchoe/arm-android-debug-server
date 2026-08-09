@@ -1,0 +1,22 @@
+# Secrets and cloud identity
+*.pem
+*.key
+.env
+.aws/
+
+# Android artifacts and captures
+*.apk
+*.apks
+*.apkm
+*.xapk
+*.dex
+*.vdex
+*.odex
+*.raw
+*.bin
+*.log
+
+# Local state
+data/
+dump/
+artifacts/
