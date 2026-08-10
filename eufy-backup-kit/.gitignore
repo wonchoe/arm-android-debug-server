@@ -1,0 +1,12 @@
+# Keep all application and capture material private
+private-artifacts/
+*.apk
+*.apkm
+*.apks
+*.xapk
+*.dex
+*.vdex
+*.odex
+*.raw
+*.bin
+*.log
